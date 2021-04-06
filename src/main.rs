@@ -19,8 +19,8 @@ fn main() {
         let count = days.iter().position(|x| x == day);
         match count {
             Some(x) => {
-                for i in (0..x).rev() {
-                    println!("{}, {}", i, gifts[i]);
+                for i in (0..=x).rev() {
+                    println!("{}", gifts[i]);
                 }
             },
             None    => println!("Invalid day of Christmas!"),
